@@ -205,6 +205,32 @@
         "runtime": {
           "bin/placeholder/Thl.EFCore.dll": {}
         }
+      },
+      "Thl.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Thl.Repository.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Thl.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Thl.Repository.dll": {}
+        }
+      },
+      "Thl.Repository.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Thl.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Thl.Repository.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Thl.Repository.Contract.dll": {}
+        }
       }
     }
   },
@@ -708,12 +734,24 @@
       "type": "project",
       "path": "../Thl.EFCore/Thl.EFCore.csproj",
       "msbuildProject": "../Thl.EFCore/Thl.EFCore.csproj"
+    },
+    "Thl.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Thl.Repository/Thl.Repository.csproj",
+      "msbuildProject": "../Thl.Repository/Thl.Repository.csproj"
+    },
+    "Thl.Repository.Contract/1.0.0": {
+      "type": "project",
+      "path": "../Thl.Repository.Contract/Thl.Repository.Contract.csproj",
+      "msbuildProject": "../Thl.Repository.Contract/Thl.Repository.Contract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 10.1.1",
-      "Thl.EFCore >= 1.0.0"
+      "Thl.EFCore >= 1.0.0",
+      "Thl.Repository >= 1.0.0",
+      "Thl.Repository.Contract >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -752,6 +790,12 @@
           "projectReferences": {
             "C:\\Amber\\Fork\\Thl\\Thl\\Thl.EFCore\\Thl.EFCore.csproj": {
               "projectPath": "C:\\Amber\\Fork\\Thl\\Thl\\Thl.EFCore\\Thl.EFCore.csproj"
+            },
+            "C:\\Amber\\Fork\\Thl\\Thl\\Thl.Repository.Contract\\Thl.Repository.Contract.csproj": {
+              "projectPath": "C:\\Amber\\Fork\\Thl\\Thl\\Thl.Repository.Contract\\Thl.Repository.Contract.csproj"
+            },
+            "C:\\Amber\\Fork\\Thl\\Thl\\Thl.Repository\\Thl.Repository.csproj": {
+              "projectPath": "C:\\Amber\\Fork\\Thl\\Thl\\Thl.Repository\\Thl.Repository.csproj"
             }
           }
         }

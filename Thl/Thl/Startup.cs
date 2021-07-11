@@ -1,16 +1,12 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Thl.Repository.Contract.IRepository;
+using Thl.Repository.Repository;
 
 namespace Thl
 {
@@ -27,6 +23,9 @@ namespace Thl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient<ILoggerFactory, LoggerFactory>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
