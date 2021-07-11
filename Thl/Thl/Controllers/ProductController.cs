@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Thl.Contants;
 using Thl.EFCore.Models;
+using Thl.Extensions;
 using Thl.Models;
 using Thl.Repository.Contract.IRepository;
 
@@ -37,7 +39,7 @@ namespace Thl.Controllers
             try
             {
                 if (id <= 0)
-                    return BadRequest();
+                    return BadRequest(ValidationMessageConstant.NOT_FOUND_ID.ToDescription());
 
                 var product = await _productRepository.GetProductByIdAsync(id);
 
@@ -65,8 +67,8 @@ namespace Thl.Controllers
         {
             try
             {
-                if (name == null)
-                    return BadRequest();
+                if (name == null || page <= 0)
+                    return BadRequest(ValidationMessageConstant.INVALID_PARAM.ToDescription());
 
                 var products = await _productRepository.GetProductsByNameAsync(page, name);
 
@@ -96,7 +98,7 @@ namespace Thl.Controllers
             try
             {
                 if (!ModelState.IsValid || productDto == null)
-                    return BadRequest();
+                    return BadRequest(ValidationMessageConstant.INVALID_REQUEST.ToDescription());
 
                 var product = _mapper.Map<Product>(productDto);
 
@@ -122,12 +124,12 @@ namespace Thl.Controllers
             try
             {
                 if (!ModelState.IsValid || productDto == null || id != productDto.Id)
-                    return BadRequest();
+                    return BadRequest(ValidationMessageConstant.INVALID_REQUEST.ToDescription());
 
                 var product = _productRepository.GetProductByIdAsync(id);
 
                 if (product == null)
-                    return BadRequest();
+                    return BadRequest(ValidationMessageConstant.NOT_FOUND_DATA.ToDescription());
 
                 var productToUpdate = _mapper.Map<Product>(productDto);
 
