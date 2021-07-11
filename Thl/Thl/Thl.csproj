@@ -4,5 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Thl.EFCore\Thl.EFCore.csproj" />
+    <ProjectReference Include="..\Thl.Repository.Contract\Thl.Repository.Contract.csproj" />
+    <ProjectReference Include="..\Thl.Repository\Thl.Repository.csproj" />
+  </ItemGroup>
+
 
 </Project>
