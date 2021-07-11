@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thl", "Thl\Thl.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thl.EFCore", "Thl.EFCore\Thl.EFCore.csproj", "{8C8D3BA9-C61F-4504-B1C5-41E0A6DFC4DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thl.Repository.Contract", "Thl.Repository.Contract\Thl.Repository.Contract.csproj", "{756AF58C-06ED-496E-B999-1E3DB6734A05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thl.Repository", "Thl.Repository\Thl.Repository.csproj", "{BD08FE76-7798-4A65-A74B-7077C9553447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8C8D3BA9-C61F-4504-B1C5-41E0A6DFC4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C8D3BA9-C61F-4504-B1C5-41E0A6DFC4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C8D3BA9-C61F-4504-B1C5-41E0A6DFC4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756AF58C-06ED-496E-B999-1E3DB6734A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756AF58C-06ED-496E-B999-1E3DB6734A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756AF58C-06ED-496E-B999-1E3DB6734A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756AF58C-06ED-496E-B999-1E3DB6734A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD08FE76-7798-4A65-A74B-7077C9553447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD08FE76-7798-4A65-A74B-7077C9553447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD08FE76-7798-4A65-A74B-7077C9553447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD08FE76-7798-4A65-A74B-7077C9553447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
